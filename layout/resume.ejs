@@ -1,0 +1,50 @@
+<section class="resume-page">
+  <div class="resume-hero">
+    <div class="resume-identity">
+      <h1><%= page.title || config.author || config.title %></h1>
+      <% if (page.location && page.location.length) { %>
+        <p class="resume-identity-meta">
+          <span><%= page.location.join(' ') %></span>
+        </p>
+      <% } %>
+      <% if (page.description) { %>
+        <p class="resume-summary"><%= page.description %></p>
+      <% } %>
+      <% if (page.highlights && page.highlights.length) { %>
+        <ul class="resume-highlights">
+          <% page.highlights.forEach(function(item) { %>
+            <li><%= item %></li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </div>
+    <div class="resume-meta">
+      <% if (page.photo) { %>
+        <div class="resume-photo-wrap">
+          <img class="resume-photo" src="<%- url_for(page.photo) %>" alt="<%= (page.title || config.author || 'photo') + ' photo' %>">
+        </div>
+      <% } %>
+      <% if (page.contacts && page.contacts.length) { %>
+        <div class="resume-meta-links">
+          <% page.contacts.forEach(function(item) { %>
+            <a class="resume-site-link" href="<%= item.url.indexOf('/') === 0 ? url_for(item.url) : item.url %>"<% if (item.url.indexOf('mailto:') !== 0 && item.url.indexOf('/') !== 0) { %> target="_blank" rel="noopener"<% } %> aria-label="<%= item.label %>">
+              <img src="<%= item.icon.indexOf('/') === 0 ? url_for(item.icon) : item.icon %>" alt="<%= item.label %>">
+            </a>
+          <% }) %>
+        </div>
+      <% } %>
+      <% if (page.email) { %>
+        <p class="resume-meta-text">
+          <span>Email:</span>
+          <a href="mailto:<%= page.email %>"><%= page.email %></a>
+        </p>
+      <% } %>
+    </div>
+  </div>
+
+  <article class="post resume-content">
+    <div class="content" itemprop="articleBody">
+      <%- page.content %>
+    </div>
+  </article>
+</section>

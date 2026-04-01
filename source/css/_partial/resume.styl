@@ -1,0 +1,410 @@
+.resume-page
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
+
+.content
+  skillgroups
+    display: block
+    margin: .85rem 0 1.1rem
+
+  skillgroup
+    display: block
+
+  skillgroup + skillgroup
+    margin-top: 1rem
+
+  grouptitle
+    display: block
+    margin: 0 0 .55rem
+    font-size: .95rem
+    font-weight: 700
+    color: $color-accent-3
+
+  skills
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: .9rem
+    margin: 0
+
+  skillitem
+    display: block
+    padding: .95rem 1rem
+    border: 1px solid $color-border
+    border-radius: 10px
+    background: rgba($color-accent-1, .03)
+
+  skillname
+    display: block
+    margin-top: 0
+    margin-bottom: .45rem
+    font-size: 1.05rem
+    font-weight: 700
+
+  skilltags
+    display: flex
+    flex-wrap: wrap
+    gap: .45rem
+    margin: 0 0 .55rem
+
+  tag
+    display: inline-block
+    padding: .16rem .5rem
+    border-radius: 999px
+    background: rgba($color-accent-1, .09)
+    color: $color-accent-3
+    font-size: .82rem
+    line-height: 1.35
+
+  skilldesc
+    display: block
+    margin: 0
+
+  projects.resume-projects
+    display: grid
+    gap: .9rem
+    margin: .85rem 0 1.1rem
+
+  projectitem
+    display: block
+    padding: .95rem 1.05rem
+    border: 1px solid $color-border
+    border-radius: 10px
+
+  projectname
+    display: block
+    font-size: 1rem
+    font-weight: 700
+
+  projecttime
+    display: block
+    flex-shrink: 0
+    color: $color-meta
+    font-size: .92rem
+
+  projectbackground,
+  projectduty,
+  projectresult
+    display: block
+    margin: .25rem 0
+
+  projectbackground:before
+    content: "背景："
+    font-weight: 700
+
+  projectduty:before
+    content: "职责："
+    font-weight: 700
+
+  projectresult:before
+    content: "成果："
+    font-weight: 700
+
+  projectresult:last-child
+    margin-bottom: 0
+
+  .resume-hero
+    display: grid
+    grid-template-columns: minmax(0, 1.85fr) 15.5rem
+    gap: 1.5rem
+    align-items: start
+    padding: 1.5rem
+    border: 1px solid $color-border
+    border-radius: 12px
+    background: linear-gradient(135deg, rgba($color-accent-1, .08), rgba($color-background, .98))
+
+  .resume-identity
+    min-width: 0
+
+  h1
+    margin: 0
+    font-size: 2.35rem
+    line-height: 1.05
+
+  .resume-identity-meta
+    margin: .45rem 0 0
+    color: $color-meta
+    font-size: .92rem
+    line-height: 1.5
+
+  .resume-summary
+    margin: .85rem 0 0
+    max-width: 40rem
+    font-size: 1.05rem
+    line-height: 1.7
+
+  .resume-highlights
+    display: flex
+    flex-wrap: wrap
+    gap: .6rem
+    margin: .9rem 0 0
+    padding: 0
+    list-style: none
+
+    li
+      margin: 0
+      padding: .28rem .62rem
+      border: 1px solid $color-border
+      border-radius: 999px
+      background: rgba($color-background, .72)
+      font-size: .88rem
+
+  .resume-meta
+    display: grid
+    gap: .45rem
+    justify-items: center
+    align-content: start
+    padding: .25rem 0
+
+  .resume-photo-wrap
+    justify-self: center
+    width: 10.5rem
+    padding: .35rem
+    border: 1px solid $color-border
+    border-radius: 14px
+    background: rgba($color-background, .95)
+
+  .resume-photo
+    display: block
+    width: 100%
+    aspect-ratio: 295 / 413
+    object-fit: cover
+    object-position: center top
+    border-radius: 10px
+
+  .resume-meta-links
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: .7rem
+    margin: 0
+
+  .resume-site-link
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 1.6rem
+    height: 1.6rem
+    border: 1px solid $color-border
+    border-radius: 999px
+    background: rgba($color-background, .82)
+    background-image: none
+    transition: background-color .18s ease, border-color .18s ease, transform .18s ease
+
+    &:hover
+      background: rgba($color-accent-1, .12)
+      background-image: none
+      border-color: $color-accent-1
+      transform: translateY(-1px)
+
+    img
+      display: block
+      width: .95rem
+      height: .95rem
+      object-fit: contain
+
+  .resume-meta-text
+    margin: 0
+    text-align: center
+    font-size: .84rem
+    line-height: 1.5
+    white-space: nowrap
+
+    span:first-child
+      color: $color-accent-3
+      margin-right: .3rem
+
+  .resume-content
+    margin: 0
+
+    .content
+      gap: 0
+      line-height: 1.7
+
+    h2
+      margin-top: 1.8rem
+      margin-bottom: .8rem
+      padding-bottom: .45rem
+      border-bottom: 1px solid $color-border
+      font-size: 1.3rem
+
+    h2:before
+      display: none
+
+    h3
+      margin-top: 0
+      margin-bottom: .45rem
+      font-size: 1.05rem
+
+    p + ul
+      margin-top: -.25rem
+
+    ul
+      padding-left: 1.2rem
+
+    li
+      margin-bottom: .35rem
+
+    blockquote
+      margin: 1.5rem 0
+      padding: 1rem 1.25rem
+      border-left: 3px solid $color-accent-1
+      background: rgba($color-accent-1, .06)
+
+    .resume-section-intro
+      margin: 0 0 .9rem
+      color: $color-accent-3
+
+    .resume-section-head
+      display: flex
+      align-items: baseline
+      justify-content: space-between
+      gap: 1rem
+      padding-bottom: .45rem
+      border-bottom: 1px solid $color-border
+      margin-top: 1.8rem
+      margin-bottom: .8rem
+
+      h2
+        margin: 0
+        padding: 0
+        border: 0
+
+      h2:before
+        display: none
+
+    .resume-card
+      padding: .95rem 1rem
+      border: 1px solid $color-border
+      border-radius: 10px
+      background: rgba($color-accent-1, .03)
+
+      p:last-child
+        margin-bottom: 0
+
+    .resume-card-compact
+      padding: .9rem 1rem
+
+    .resume-education
+      eduitem
+        display: flex
+        flex-wrap: wrap
+        align-items: baseline
+        justify-content: space-between
+        gap: 1rem
+
+      school,
+      major,
+      stage,
+      time,
+      curriculums,
+      note
+        display: block
+
+      school
+        display: inline
+        font-weight: 700
+        font-size: 1rem
+        margin-right: .45rem
+
+      major
+        display: inline
+        color: $color-meta
+        font-size: .92rem
+
+      stage
+        display: inline
+        margin-left: .3rem
+        color: $color-meta
+        font-size: .92rem
+
+      eduitem[reading="true"] stage:after
+        content: "（在读）"
+
+      eduitem[reading="false"] stage:after
+        content: ""
+
+      time
+        display: inline
+        margin-left: auto
+        flex-shrink: 0
+        color: $color-meta
+        font-size: .92rem
+
+      note
+        width: 100%
+        margin-top: .18rem
+        line-height: 1.45
+
+      note:empty
+        display: none
+
+      curriculums
+        width: 100%
+        margin-top: .08rem
+        line-height: 1.45
+
+        &:before
+          content: "主修课程："
+
+      note + curriculums
+        margin-top: .18rem
+
+    .resume-title-row
+      display: flex
+      justify-content: space-between
+      gap: 1rem
+      align-items: baseline
+      margin-bottom: .35rem
+
+      strong
+        font-size: 1rem
+
+      span
+        flex-shrink: 0
+        color: $color-meta
+        font-size: .92rem
+
+    .resume-more
+      margin: -.2rem 0 1.1rem
+      text-align: right
+
+    .resume-more-top
+      margin: 0
+
+    .resume-awards
+      display: grid
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+      gap: .75rem
+      padding: 0
+      list-style: none
+
+      li
+        margin: 0
+        padding: .8rem .95rem
+        border: 1px solid $color-border
+        border-radius: 10px
+        background: rgba($color-background, .7)
+
+@media (max-width: 720px)
+  .resume-page
+    .resume-hero
+      grid-template-columns: 1fr
+      gap: 1rem
+      padding: 1.25rem
+
+    .resume-photo-wrap
+      width: 8rem
+
+    h1
+      font-size: 2rem
+
+    .resume-content
+      .content
+        skills,
+        .resume-awards
+          grid-template-columns: 1fr
+
+        .resume-title-row
+          flex-direction: column
+          gap: .15rem

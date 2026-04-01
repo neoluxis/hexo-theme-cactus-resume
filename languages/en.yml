@@ -1,11 +1,13 @@
 nav:
   home: Home
   about: About
-  articles: Writing
+  articles: Articles
+  author: Author
   tag: Tag
   category: Category
   projects: Projects
   search: Search
+  authors: Authors
 
 icons:
   menu: Menu
@@ -18,7 +20,7 @@ index:
   find_me_on: Find me on
   enum_comma: ','
   enum_and: and
-  articles: Writing
+  articles: Articles
   projects: Projects
   topics: Topics
   most_recent: Most recent
@@ -31,7 +33,7 @@ post:
     share: Share post
   mobile:
     menu: Menu
-    toc: TOC
+    toc: Content
     back_to_top: Top
     share: Share
 
