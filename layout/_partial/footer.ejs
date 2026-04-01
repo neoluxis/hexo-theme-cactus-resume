@@ -17,11 +17,34 @@
     </nav>
   </div>
   <div style="text-align: center;">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span id="busuanzi_container_page_pv">本文总阅读 <span id="busuanzi_value_page_pv"></span> 次</span>
     |
     <span id="busuanzi_container_site_uv">本站总访问量 <span id="busuanzi_value_site_uv"></span> 人</span>
     /
     <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span> 次</span>
+    <script>
+      fetch('https://busuanzi.neolux.eu.org/')
+        .then(function (res) { return res.json() })
+        .then(function (data) {
+          var siteUv = document.getElementById('busuanzi_value_site_uv')
+          var sitePv = document.getElementById('busuanzi_value_site_pv')
+          var pagePv = document.getElementById('busuanzi_value_page_pv')
+
+          if (siteUv && data.site_uv !== undefined) {
+            siteUv.innerText = data.site_uv
+          }
+
+          if (sitePv && data.site_pv !== undefined) {
+            sitePv.innerText = data.site_pv
+          }
+
+          if (pagePv && data.page_pv !== undefined) {
+            pagePv.innerText = data.page_pv
+          }
+        })
+        .catch(function (err) {
+          console.error('Failed to fetch busuanzi stats:', err)
+        })
+    </script>
   </div>
 </footer>
