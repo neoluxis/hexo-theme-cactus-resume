@@ -1,6 +1,6 @@
-# Cactus
+# Cactus Resume
 
-A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal website.
+A resume-oriented customization of the [Hexo](http://hexo.io) Cactus theme.
 
 :cactus: [Demo](https://probberechts.github.io/hexo-theme-cactus/)
 
@@ -55,14 +55,14 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 1. In the `root` directory:
 
     ```sh
-    $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+    $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus-resume
     ```
 
 2. Change the `theme` property in the `_config.yml` file.
 
     ```yml
     # theme: landscape
-    theme: cactus
+    theme: cactus-resume
     ```
    
    See below for more information on how to customize this theme.
@@ -110,7 +110,7 @@ theme_config:
 colorscheme: dark
 ```
 
-This will override the default black colorscheme in `themes/cactus/_config.yml`.
+This will override the default black colorscheme in `themes/cactus-resume/_config.yml`.
 
 ### Color scheme
 

@@ -1,7 +1,7 @@
 {
-  "name": "hexo-theme-cactus",
+  "name": "hexo-theme-cactus-resume",
   "version": "3.0.0",
-  "description": "A responsive, clean and simple theme for Hexo.",
+  "description": "A resume-oriented customization of the Cactus theme for Hexo.",
   "main": "index.js",
   "scripts": {
     "lint": "gulp lint --silent",
@@ -15,7 +15,8 @@
   "keywords": [
     "Hexo",
     "Theme",
-    "Cactus"
+    "Cactus",
+    "Resume"
   ],
   "author": "Pieter Robberechts",
   "license": "MIT",
