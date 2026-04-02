@@ -133,6 +133,12 @@
     font-size: 1.05rem
     line-height: 1.7
 
+  .resume-summary-row
+    display: block
+
+  .resume-photo-wrap-mobile
+    display: none
+
   .resume-highlights
     display: flex
     flex-wrap: wrap
@@ -392,6 +398,22 @@
       grid-template-columns: 1fr
       gap: 1rem
       padding: 1.25rem
+
+    .resume-summary-row
+      display: grid
+      grid-template-columns: minmax(0, 1fr) 8rem
+      gap: .9rem
+      align-items: start
+
+    .resume-summary
+      margin-top: 0
+
+    .resume-photo-wrap-desktop
+      display: none
+
+    .resume-photo-wrap-mobile
+      display: block
+      width: 8rem
 
     .resume-photo-wrap
       width: 8rem

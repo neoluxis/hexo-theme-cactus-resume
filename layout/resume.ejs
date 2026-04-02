@@ -8,7 +8,14 @@
         </p>
       <% } %>
       <% if (page.description) { %>
-        <p class="resume-summary"><%= page.description %></p>
+        <div class="resume-summary-row">
+          <p class="resume-summary"><%= page.description %></p>
+          <% if (page.photo) { %>
+            <div class="resume-photo-wrap resume-photo-wrap-mobile">
+              <img class="resume-photo" src="<%- url_for(page.photo) %>" alt="<%= (page.title || config.author || 'photo') + ' photo' %>">
+            </div>
+          <% } %>
+        </div>
       <% } %>
       <% if (page.highlights && page.highlights.length) { %>
         <ul class="resume-highlights">
@@ -20,7 +27,7 @@
     </div>
     <div class="resume-meta">
       <% if (page.photo) { %>
-        <div class="resume-photo-wrap">
+        <div class="resume-photo-wrap resume-photo-wrap-desktop">
           <img class="resume-photo" src="<%- url_for(page.photo) %>" alt="<%= (page.title || config.author || 'photo') + ' photo' %>">
         </div>
       <% } %>
