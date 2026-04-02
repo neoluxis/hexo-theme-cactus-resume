@@ -34,8 +34,19 @@
       <% if (page.contacts && page.contacts.length) { %>
         <div class="resume-meta-links">
           <% page.contacts.forEach(function(item) { %>
+            <% var iconValue = item.icon || '' %>
+            <% var isIconUrl = /^https?:\/\//.test(iconValue) || iconValue.indexOf('/') === 0 %>
+            <% var iconClass = iconValue.indexOf('fa-') !== -1
+              ? iconValue
+              : (/^(github|linkedin|youtube|bilibili|x-twitter|twitter|facebook|instagram|gitlab|discord|telegram|mastodon)$/.test(iconValue)
+                ? 'fa-brands fa-' + iconValue
+                : 'fa-solid fa-' + iconValue) %>
             <a class="resume-site-link" href="<%= item.url.indexOf('/') === 0 ? url_for(item.url) : item.url %>"<% if (item.url.indexOf('mailto:') !== 0 && item.url.indexOf('/') !== 0) { %> target="_blank" rel="noopener"<% } %> aria-label="<%= item.label %>">
-              <img src="<%= item.icon.indexOf('/') === 0 ? url_for(item.icon) : item.icon %>" alt="<%= item.label %>">
+              <% if (isIconUrl) { %>
+                <img src="<%= iconValue.indexOf('/') === 0 ? url_for(iconValue) : iconValue %>" alt="<%= item.label %>">
+              <% } else { %>
+                <i class="<%= iconClass %>" aria-hidden="true"></i>
+              <% } %>
             </a>
           <% }) %>
         </div>
